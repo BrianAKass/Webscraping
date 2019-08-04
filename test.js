@@ -1,7 +1,7 @@
 const request = require('request');
 const cheerio = require('cheerio');
 
-request(`http://amazon.com/dp/B002JPJ0QY`, (error,response,html) =>{
+request(`http://amazon.com/dp/B00YD547Q6`, (error,response,html) =>{
     if (!error && response.statusCode ==200) {
         const $ = cheerio.load(html);
         const productTitle = $("#productTitle").text().replace(/\s\s+/g, '');
